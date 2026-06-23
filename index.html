@@ -20,11 +20,23 @@
     </script>
     <style>
         body { font-family: 'Inter', sans-serif; }
+
+        /* Mobile image fixes — each photo gets its own crop point */
+        .photo-volunteers { object-position: center 20%; }
+        .photo-guys       { object-position: center 15%; }
+        .photo-girls      { object-position: center 18%; }
+        .photo-dropin     { object-position: center 30%; }
+
+        /* Smooth scroll offset so nav doesn't cover section headers */
+        section[id] {
+            scroll-margin-top: 88px;
+        }
     </style>
 </head>
 
 <body class="bg-gray-50 text-gray-800 antialiased">
 
+    <!-- NAV -->
     <nav class="bg-white shadow-sm sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
@@ -33,17 +45,18 @@
                     <span class="font-bold text-2xl text-logoBlue tracking-tight">Immuno<span class="text-logoGreen">Reach</span></span>
                 </div>
 
-                <div class="hidden md:flex space-x-8 items-center">
+                <div class="hidden md:flex space-x-10 items-center">
                     <a href="#about" class="text-gray-600 hover:text-logoBlue transition-colors font-medium">About</a>
                     <a href="#initiatives" class="text-gray-600 hover:text-logoBlue transition-colors font-medium">Our Work</a>
                     <a href="#events" class="text-gray-600 hover:text-logoBlue transition-colors font-medium">Events</a>
                     <a href="#education" class="text-gray-600 hover:text-logoBlue transition-colors font-medium">Education Hub</a>
-                    <a href="https://forms.gle/PFttMkA5wdabtWVw7" target="_blank" class="bg-logoBlue text-white px-5 py-2 rounded-full font-semibold hover:bg-blue-500 transition-all shadow-md">Get Involved</a>
+                    <a href="https://forms.gle/PFttMkA5wdabtWVw7" target="_blank" class="bg-logoBlue text-white px-6 py-2.5 rounded-full font-semibold hover:bg-blue-500 transition-all shadow-md ml-2">Get Involved</a>
                 </div>
             </div>
         </div>
     </nav>
 
+    <!-- HERO -->
     <header class="relative bg-white overflow-hidden border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 flex flex-col md:flex-row items-center">
             <div class="md:w-1/2 pr-0 md:pr-12 text-center md:text-left z-10">
@@ -54,7 +67,7 @@
                 </h1>
 
                 <p class="text-lg text-gray-600 mb-8 leading-relaxed">
-                    Bridging the gap between immunological science and community action in YYC. We are a collective of UCalgary students from diverse academic backgrounds, all driven by a shared mission to create tangible change.
+                    We're a group of UCalgary students — from biology, nursing, kinesiology, and beyond — who believe public health starts at the community level. Our goal is simple: turn what we're learning in the classroom into something that actually helps people in Calgary.
                 </p>
 
                 <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
@@ -75,21 +88,23 @@
         </div>
     </header>
 
-    <section id="about" class="py-20 bg-gray-50">
+    <!-- ABOUT -->
+    <section id="about" class="py-24 bg-gray-50">
         <div class="max-w-4xl mx-auto px-4 text-center">
             <h2 class="text-3xl font-bold text-gray-900 mb-6">Driven to Make Change</h2>
             <p class="text-lg text-gray-600 leading-relaxed">
-                ImmunoReach is a <strong>University of Calgary student-led organization</strong>. We are an interdisciplinary team of student leaders, researchers, and community advocates dedicated to translating complex immunological concepts into tangible action. By combining our diverse skills and perspectives, we aim to ensure that every community in Calgary has the tools and knowledge necessary to protect their health.
+                ImmunoReach started with a straightforward idea: UCalgary students know a lot about how the immune system works, but that knowledge doesn't always reach the people who could benefit from it most. We're an interdisciplinary team of students working to change that — through hands-on outreach, accessible education, and building partnerships with the Calgary community. We're not just studying health; we're trying to contribute to it.
             </p>
         </div>
     </section>
 
-    <section id="initiatives" class="py-20 bg-white border-t border-gray-100">
+    <!-- OUR WORK -->
+    <section id="initiatives" class="py-24 bg-white border-t border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-3xl font-bold text-gray-900 mb-4">Our Work</h2>
                 <p class="text-gray-600 max-w-2xl mx-auto">
-                    We combine student-led research, community outreach, and care-based initiatives to support health awareness and dignity in Calgary.
+                    Student-led research, community outreach, and care-based initiatives to support health awareness and dignity in Calgary.
                 </p>
             </div>
 
@@ -102,7 +117,7 @@
                     </div>
                     <h3 class="text-xl font-bold mb-3">Health Topic Research</h3>
                     <p class="text-sm text-gray-500">
-                        Synthesizing recent health literature to create evidence-based, easy-to-understand resources for the public.
+                        We review current health literature and turn it into plain-language resources that anyone can actually use — no science background required.
                     </p>
                 </div>
 
@@ -112,9 +127,9 @@
                             <path stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Kit Building</h3>
+                    <h3 class="text-xl font-bold mb-3">Wellness Kit Building</h3>
                     <p class="text-sm text-gray-500">
-                        We assemble wellness kits containing shampoo, soap, a razor, comb, toothbrush, toothpaste, and a handwritten note of encouragement for community members in Calgary.
+                        We put together hygiene kits — shampoo, soap, a razor, comb, toothbrush, toothpaste, and a handwritten note — and donate them to community members in Calgary who need them.
                     </p>
                 </div>
 
@@ -126,36 +141,41 @@
                     </div>
                     <h3 class="text-xl font-bold mb-3">Education Outreach</h3>
                     <p class="text-sm text-gray-500">
-                        Engaging with the community through accessible workshops and digital platforms to demystify disease prevention.
+                        We run workshops and create digital content that makes disease prevention and immune health easier to understand for everyone.
                     </p>
                 </div>
             </div>
 
+            <!-- STATS BANNER -->
             <div class="bg-logoBlue rounded-3xl p-10 grid grid-cols-1 md:grid-cols-3 gap-8 text-center text-white shadow-xl shadow-blue-100">
                 <div>
-                    <p class="text-lg font-bold opacity-80 uppercase tracking-widest mb-2">Care Kits</p>
-                    <p class="text-3xl font-extrabold">Built & Delivered</p>
+                    <p class="text-lg font-bold opacity-80 uppercase tracking-widest mb-2">Hygiene Kits</p>
+                    <p class="text-5xl font-extrabold mb-1">60</p>
+                    <p class="text-sm opacity-70">Built &amp; delivered to Calgarians</p>
                 </div>
                 <div>
-                    <p class="text-lg font-bold opacity-80 uppercase tracking-widest mb-2">Volunteer Base</p>
-                    <p class="text-3xl font-extrabold">Growing Now</p>
+                    <p class="text-lg font-bold opacity-80 uppercase tracking-widest mb-2">Volunteers</p>
+                    <p class="text-5xl font-extrabold mb-1">Growing</p>
+                    <p class="text-sm opacity-70">UCalgary students from multiple programs</p>
                 </div>
                 <div>
                     <p class="text-lg font-bold opacity-80 uppercase tracking-widest mb-2">Outreach</p>
-                    <p class="text-3xl font-extrabold">Active in Calgary</p>
+                    <p class="text-5xl font-extrabold mb-1">Active</p>
+                    <p class="text-sm opacity-70">Community partnerships in Calgary</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="events" class="py-20 bg-gray-50 border-t border-gray-100">
+    <!-- EVENTS -->
+    <section id="events" class="py-24 bg-gray-50 border-t border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
             <div class="text-center mb-16">
                 <span class="text-logoGreen font-bold tracking-wider uppercase text-xs mb-3 block">Recent Event</span>
-                <h2 class="text-3xl font-bold text-gray-900 mb-4">Wellness Kit Building & Donation</h2>
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Wellness Kit Building &amp; Donation</h2>
                 <p class="text-gray-600 max-w-3xl mx-auto">
-                    Our team recently assembled and donated wellness kits for members of the Calgary community. Each kit contained essential hygiene supplies and a handwritten note of encouragement to promote dignity, wellbeing, and support.
+                    Our team recently put together and donated 60 wellness kits for members of the Calgary community. Each kit included essential hygiene supplies and a handwritten note — a small gesture, but one that goes a long way.
                 </p>
             </div>
 
@@ -165,17 +185,20 @@
                 </div>
 
                 <div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">What's In Each Wellness Kit?</h3>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Why Hygiene Kits?</h3>
                     <p class="text-gray-600 leading-relaxed mb-4">
-                        Each kit was thoughtfully assembled by ImmunoReach volunteers and contains shampoo, soap, a razor, comb, toothbrush, toothpaste, and a handwritten message of encouragement.
+                        This might seem like a simple act of charity, but there's a real public health connection. Basic hygiene — handwashing, oral care, skin health — is one of the most effective ways to prevent the spread of infection. For people experiencing homelessness or housing instability, consistent access to hygiene products isn't a given, which leaves them more vulnerable to skin infections, respiratory illness, and other preventable conditions.
                     </p>
                     <p class="text-gray-600 leading-relaxed mb-4">
-                        Beyond providing practical supplies, the kits were designed to remind recipients that they are valued members of our community.
+                        From an immunology standpoint, the skin and mucous membranes are the body's first line of defence. When those barriers are compromised — often accelerated by poor hygiene access — the immune system has to work a lot harder. These kits are a small but meaningful way to support that first line of defence for community members who need it most.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        Each kit contained shampoo, soap, a razor, comb, toothbrush, toothpaste, and a handwritten note from one of our volunteers.
                     </p>
 
                     <div class="bg-logoBlue/10 rounded-xl p-4 border border-blue-100">
                         <p class="text-logoBlue font-semibold">
-                            Student-led • Community-focused • Built with care
+                            Student-led · Community-focused · Built with care
                         </p>
                     </div>
                 </div>
@@ -183,31 +206,32 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100">
-                    <img src="IMG_4892.jpg" alt="ImmunoReach volunteers" class="w-full h-72 object-cover object-top">
+                    <img src="IMG_4892.jpg" alt="ImmunoReach volunteers" class="w-full h-72 object-cover photo-volunteers">
                 </div>
 
                 <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100">
-                    <img src="guys infront of kit.jpg" alt="Volunteer team" class="w-full h-72 object-cover object-top">
+                    <img src="guys infront of kit.jpg" alt="Volunteer team" class="w-full h-72 object-cover photo-guys">
                 </div>
 
                 <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100">
-                    <img src="girls infront of kit.jpg" alt="Volunteer team" class="w-full h-72 object-cover object-top">
+                    <img src="girls infront of kit.jpg" alt="Volunteer team" class="w-full h-72 object-cover photo-girls">
                 </div>
 
                 <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100">
-                    <img src="kit in front of drop in.jpg" alt="Wellness kit donation" class="w-full h-72 object-cover object-top">
+                    <img src="kit in front of drop in.jpg" alt="Wellness kit donation" class="w-full h-72 object-cover photo-dropin">
                 </div>
             </div>
 
         </div>
     </section>
 
-    <section id="education" class="py-20 bg-white">
+    <!-- EDUCATION HUB -->
+    <section id="education" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-3xl font-bold text-gray-900 mb-4">Education Hub</h2>
                 <p class="text-gray-600">
-                    Making immunology accessible. Content is currently being developed by our interdisciplinary student team.
+                    Our student team is putting together accessible immunology content — plain-language, evidence-based, and actually readable. Check back soon.
                 </p>
             </div>
 
@@ -215,24 +239,25 @@
                 <div class="bg-gray-50 border border-gray-100 rounded-2xl p-10 opacity-75 relative flex flex-col items-center">
                     <span class="bg-gray-100 text-gray-400 text-[10px] font-bold px-2 py-1 rounded uppercase tracking-widest mb-4">Coming Soon</span>
                     <h3 class="text-xl font-bold mb-3 text-gray-400">Immune Defense 101</h3>
-                    <p class="text-gray-400 text-sm italic">Demystifying the body's natural defense systems.</p>
+                    <p class="text-gray-400 text-sm italic">A straightforward look at how your immune system actually works.</p>
                 </div>
 
                 <div class="bg-gray-50 border border-gray-100 rounded-2xl p-10 opacity-75 relative flex flex-col items-center">
                     <span class="bg-gray-100 text-gray-400 text-[10px] font-bold px-2 py-1 rounded uppercase tracking-widest mb-4">Coming Soon</span>
                     <h3 class="text-xl font-bold mb-3 text-gray-400">Holistic Health</h3>
-                    <p class="text-gray-400 text-sm italic">Exploring the intersection of lifestyle, environment, and immunity.</p>
+                    <p class="text-gray-400 text-sm italic">How lifestyle, environment, and immunity are more connected than you'd think.</p>
                 </div>
 
                 <div class="bg-gray-50 border border-gray-100 rounded-2xl p-10 opacity-75 relative flex flex-col items-center">
                     <span class="bg-gray-100 text-gray-400 text-[10px] font-bold px-2 py-1 rounded uppercase tracking-widest mb-4">Coming Soon</span>
                     <h3 class="text-xl font-bold mb-3 text-gray-400">Research Briefs</h3>
-                    <p class="text-gray-400 text-sm italic">Student-led breakdowns of the latest scientific discoveries.</p>
+                    <p class="text-gray-400 text-sm italic">Student-written breakdowns of recent science — no jargon required.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- FOOTER -->
     <footer class="bg-white border-t border-gray-100 py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-start">
             <div class="mb-10 md:mb-0 max-w-sm text-center md:text-left">
